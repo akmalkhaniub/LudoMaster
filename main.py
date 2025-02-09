@@ -29,6 +29,9 @@ class LudoGame:
             print("Pygame initialized successfully")
             print(f"Display driver: {pygame.display.get_driver()}")
             print(f"Display size: {self.screen.get_size()}")
+
+            # Force window position (for debugging)
+            os.environ['SDL_VIDEO_WINDOW_POS'] = '0,0'
         except pygame.error as e:
             print(f"Failed to initialize display: {e}")
             sys.exit(1)
@@ -93,7 +96,14 @@ class LudoGame:
 
     def draw(self):
         try:
+            # Clear screen with white background
             self.screen.fill(WHITE)
+
+            # Draw debug info
+            print(f"Drawing frame - Screen size: {self.screen.get_size()}")
+            print(f"Board offset: {self.board.offset}")
+
+            # Draw board and components
             self.board.draw(self.screen)
 
             # Draw all players' tokens

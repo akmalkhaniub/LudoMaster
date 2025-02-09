@@ -13,8 +13,8 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 800
 
 # Board dimensions
-BOARD_SIZE = 600
-CELL_SIZE = BOARD_SIZE // 15
+BOARD_SIZE = 600  # Make sure board fits comfortably in screen
+CELL_SIZE = BOARD_SIZE // 15  # 15x15 grid
 
 # Token dimensions
 TOKEN_RADIUS = CELL_SIZE // 2 - 5
