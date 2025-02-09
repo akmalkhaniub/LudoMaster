@@ -1,7 +1,7 @@
 # Colors
-RED = (255, 65, 54)      # #FF4136
-BLUE = (0, 116, 217)     # #0074D9
-GREEN = (46, 204, 64)    # #2ECC40
+RED = (255, 65, 54)      # #FF4136 - Bright red
+BLUE = (0, 116, 217)     # #0074D9 - Deep blue
+GREEN = (46, 204, 64)    # #2ECC40 - Bright green
 YELLOW = (255, 220, 0)   # #FFDC00
 BOARD_COLOR = (245, 245, 245)  # #F5F5F5
 ACCENT = (127, 219, 255)  # #7FDBFF
