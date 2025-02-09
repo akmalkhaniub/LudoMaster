@@ -6,16 +6,21 @@ from game.player import Player
 from game.dice import Dice
 from game.constants import *
 
-# Set SDL video driver
-os.environ['SDL_VIDEODRIVER'] = 'x11'
+# Set SDL video driver to software rendering
+os.environ['SDL_VIDEODRIVER'] = 'dummy'
 
 class LudoGame:
     def __init__(self):
         # Initialize pygame with error handling
         try:
             pygame.init()
-            self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+            # Use software rendering
+            self.screen = pygame.display.set_mode(
+                (SCREEN_WIDTH, SCREEN_HEIGHT),
+                pygame.SWSURFACE
+            )
             pygame.display.set_caption("Ludo Game")
+            print("Pygame initialized successfully")
         except pygame.error as e:
             print(f"Failed to initialize display: {e}")
             sys.exit(1)
@@ -29,6 +34,7 @@ class LudoGame:
 
     def run(self):
         clock = pygame.time.Clock()
+        print("Game loop starting...")
 
         while True:
             self.handle_events()
