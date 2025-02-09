@@ -72,7 +72,7 @@ class LudoGame:
 
                     if self.game_state == "ROLL" and not self.dice.rolling:
                         dice_rect = pygame.Rect(self.dice.position[0], self.dice.position[1],
-                                             self.dice.size, self.dice.size)
+                                                 self.dice.size, self.dice.size)
 
                         if dice_rect.collidepoint(mouse_pos):
                             print("Dice clicked!")
@@ -126,9 +126,9 @@ class LudoGame:
     def draw_turn_indicator(self):
         current_color = self.players[self.current_player].get_color_tuple()
         pygame.draw.circle(self.screen, current_color,
-                         (50, 50), 20)
+                             (50, 50), 20)
         pygame.draw.circle(self.screen, BLACK,
-                         (50, 50), 20, 2)
+                             (50, 50), 20, 2)
 
     def handle_token_selection(self, mouse_pos):
         current_player = self.players[self.current_player]
@@ -139,8 +139,8 @@ class LudoGame:
                 token_y = self.board.offset[1] + token.position[1] * CELL_SIZE + CELL_SIZE // 2
 
                 # Check if click is within token bounds
-                distance = ((mouse_pos[0] - token_x) ** 2 + 
-                          (mouse_pos[1] - token_y) ** 2) ** 0.5
+                distance = ((mouse_pos[0] - token_x) ** 2 +
+                            (mouse_pos[1] - token_y) ** 2) ** 0.5
 
                 if distance <= TOKEN_RADIUS:
                     print(f"Token {i} selected and moved")

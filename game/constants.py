@@ -9,11 +9,11 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
 # Screen dimensions
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 800
+SCREEN_WIDTH = 600  # Reduced from 800
+SCREEN_HEIGHT = 600  # Reduced from 800
 
 # Board dimensions
-BOARD_SIZE = 600  # Make sure board fits comfortably in screen
+BOARD_SIZE = 500  # Reduced from 600 to fit better in smaller screen
 CELL_SIZE = BOARD_SIZE // 15  # 15x15 grid
 
 # Token dimensions
