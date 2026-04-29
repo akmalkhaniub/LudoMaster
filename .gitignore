@@ -35,3 +35,5 @@ ENV/
 
 # Replit specific
 .breakpoints
+
+.env
